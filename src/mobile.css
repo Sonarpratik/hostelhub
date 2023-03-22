@@ -1,0 +1,47 @@
+@media (max-width:986px) and (min-width:0px) {
+.makeit-flex-nav{
+    flex-direction: column;
+
+}
+.home-main{
+    flex-direction: column;
+    padding: 10px 20px!important;
+}
+.footer-container{
+    padding: 40px!important;
+}
+.login-box-right{
+    display: none;
+}
+.login-box-left{
+padding: 30px 20px 30px 20px!important ;
+z-index: 2;
+} 
+.login-box{
+    position: relative!important;
+    width: 80vw!important;
+    overflow: hidden;
+}
+.login-img{
+    display: block!important;
+    position: absolute;
+    width:100%;
+    opacity: 0.4;
+    z-index: 1;
+}
+.three-item{
+    margin-top: 10px;
+}
+.rooms-component{
+    margin: 0px 20px!important;
+}
+.rooms-item{
+    flex-direction: column!important;
+}
+.for-drop{
+    width: 90%!important;
+}
+.dropdown{
+    margin-left: 10px!important;
+}
+}

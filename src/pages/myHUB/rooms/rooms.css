@@ -1,0 +1,122 @@
+.rooms-bg{
+
+    background-color: #ededed;
+}
+
+.rooms-component{
+    margin: 0px 250px;
+    /* background-color: red; */
+    height: 100%;
+    /* width: 70%; */
+    padding: 20px 0px;
+}
+.rooms-item{
+    background-color: white;
+    margin: 20px 0px;
+    min-height: 200px;
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    /* display: flex; */
+flex-wrap: wrap;
+    box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
+}
+.room-one {
+
+   
+  
+}
+.room-one img{
+    border-radius: 10px;
+
+}
+.room-two{
+    flex: 2;
+    min-width: 200px;
+    /* background-color: red; */
+    padding: 5px 15px;
+}
+.room-three{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.room-four{
+    min-width: 100%;
+    display: none;
+}
+
+.rooms-star{
+    background-color: goldenrod;
+    color: white;
+    border-radius:15px ;
+    padding: 0px 5px;
+    cursor: pointer;
+}
+.room-three p{
+    font-size: 13px;
+    margin: 0;
+}
+.room-three button{
+    padding: 10px 10px;
+    background-color: green;
+    color: white;
+    border-radius: 7px;
+    border: none;
+}
+.room-three h3{
+    display: block;
+    color: green;
+}
+.three-item{
+    padding: 10px;
+
+flex: 2;
+    background-color: rgba(7, 208, 3, 0.2);
+    border: 1px solid green;
+    border-radius: 10px;
+
+    
+}
+.small-three{
+    display: flex;
+    justify-content: space-between;
+}
+.bold-90{
+    font-weight: 900;
+}
+.grey-three-room{
+    margin: 10px 0px;
+    padding: 10px;
+/* flex: 1; */
+    background-color: rgba(106, 106, 106, 0.2);
+    border: 1px solid grey;
+    border-radius: 10px;
+    text-align: center;
+}
+.for-drop{
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    margin: auto;
+    padding-top: 20px;
+}
+.drop-color{
+    background-color: #2a3d52;
+}
+.dropdown ul li a{
+    color: goldenrod;
+}
+.input-group{
+    max-width: 300px;
+    border: 1px solid grey;
+    border-radius: 7px;
+}
+.rangess{
+    color: blue;
+    background-color: red;
+}

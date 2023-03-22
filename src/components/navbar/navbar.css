@@ -1,0 +1,75 @@
+
+.nav-bg{
+    background: rgba(11, 19, 32,0.7)!important;
+    padding: 0;
+    position: sticky!important;
+    top: 0px!important;
+    left: 0px!important;
+    z-index: 2;
+    font-family: 'Sono', sans-serif!important;
+
+}
+.color-w{
+    color: white!important;
+    opacity: 2;
+    z-index: 3;
+
+}
+.navbar-brand{
+padding: 0;
+}
+.home-img{
+    width: 30px ;
+    color: white;
+    /* background-color: white; */
+}
+.nav-item a{
+display: flex;
+/* align-items: center; */
+}
+
+.pr-10{
+    padding-right: 4px;
+}
+.nav-link:hover{
+    color: goldenrod!important;
+}
+.make-it{
+    padding:20px 10px;
+}
+.bold-400{
+    /* font-family: 'Sono', sans-serif; */
+position: relative;
+    font-weight: 800;
+}
+.bold-400:hover{
+    color: goldenrod!important;
+}
+
+
+.bold-400 span:hover,.bold-400:hover {
+  
+    /* text-decoration:line-through; */
+    color: white;
+    transition: all 0.3s ease;
+
+    
+}
+
+.bold-400 span{
+    position: absolute;
+    top: 10px;
+    right: -10px;
+    /* font-family: 'Sono', sans-serif; */
+
+}
+.nav-makeit-center ul{
+display: flex;
+margin: 0;
+width: 100%;
+justify-content: space-between;
+/* flex-direction: column; */
+}
+.makeit-flex-nav{
+    display: flex;
+}

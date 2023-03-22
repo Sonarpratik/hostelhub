@@ -1,0 +1,74 @@
+.login{
+    background-color: #f8f9fa;
+    height: calc(100vh - 58.4px);
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+}
+.login-box{
+    background-color: rgb(255, 255, 255);
+    height: 500px;
+    width: 55vw;
+    box-shadow: 10px 5px 27px -8px rgba(0,0,0,0.64);
+-webkit-box-shadow: 10px 5px 27px -8px rgba(0,0,0,0.64);
+-moz-box-shadow: 10px 5px 27px -8px rgba(0,0,0,0.64);
+border-radius: 20px;
+display: flex;
+
+}
+.login-box-right{
+    background-image: url('./../img/hostelhub1.png');
+    height: 100%;
+    width: 100%;
+    /* rotate: 90px; */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    flex:1;
+}
+.login-box-left h3{
+    font-size: 2rem;
+}
+.login-box-left{
+    flex: 1;
+padding: 80px 0px 80px 80px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+font-size: 1.1rem;
+
+}
+.in-line{
+    vertical-align: middle;
+    border-bottom:2px solid grey;
+
+}
+.done{
+    background: none;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+}
+.btn-login{
+    background: rgba(11, 19, 32,0.8);
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    width: 150px;
+}
+.btn-login:hover,.btn-login:active{
+    background-color: rgba(11, 19, 32,0.9);
+}
+.logouts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-img{
+    display: none;
+}

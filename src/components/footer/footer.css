@@ -1,0 +1,13 @@
+.footer-container{
+    background-color: #2a3d52;
+    background-color: rgba(11, 19, 32,0.9);
+    color: white;
+    padding: 100px;
+    text-align: center;
+}
+.para-opa{
+    opacity: 80%;
+}
+h3{
+    display: inline;
+}

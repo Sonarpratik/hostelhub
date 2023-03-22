@@ -9,7 +9,7 @@ const Myhub = () => {
     const callAboutPage = async () => {
         try {
           const response = await fetch("/about", {
-            mode: 'no-cors',
+            // mode: 'no-cors',
             method: "GET",
             headers: {
               Accept: "application/json",

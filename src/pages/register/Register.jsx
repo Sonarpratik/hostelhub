@@ -40,7 +40,8 @@ const [load, setLoad] = useState("Register");
     const {name,email,phone,password,cpassword}=user;
 // "proxy":"http://localhost:4000",
 
-   const response = await fetch("https://userbackend.sonarpratik.repl.co/register",{
+   const response = await fetch("/register",{
+    // mode: 'no-cors',
     method:"POST",
     headers:{
       "Content-Type":"application/json"

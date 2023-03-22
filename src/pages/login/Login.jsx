@@ -23,7 +23,7 @@ const loading=true;
     setLoad("Wait")
     e.preventDefault();
 
-    const response = await fetch("/login", {
+    const response = await fetch("https://userbackend.sonarpratik.repl.co/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

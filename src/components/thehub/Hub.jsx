@@ -4,6 +4,7 @@ import "./hub.css"
 
 
 const Hub = () => {
+    
     return (
         <div>
              
@@ -19,7 +20,7 @@ const Hub = () => {
                 <Link to={"/thehub/rooms"} >
 
                     <div className='item-content'>
-                        <h1>HOSTEL</h1>
+                        <h1>HOSTELS</h1>
                     </div>
                     </Link>
                 </div>
@@ -35,7 +36,7 @@ const Hub = () => {
                 <Link to={"/"}>
 
                     <div className='item-content'>
-                        <h1>TRANSPORT</h1>
+                        <h1>TANSPORT</h1>
                     </div>
                     </Link>
                 </div>

@@ -1,0 +1,65 @@
+/* .for-corosal{
+    background-color: black;
+}
+.for-img-corosal{
+    opacity: 60%;
+} */
+
+.con{
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.con div{
+    margin: 20px;
+}
+.con-drop{
+    width: 100%;
+}
+ul li a{
+    cursor: pointer;
+}
+.container-product{
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inner-product{
+    width: 70%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    /* flex: 1; */
+}
+.inner-product div{
+    flex: 1;
+    padding: 20px;
+
+}
+.inner-product img{
+    flex: 1;
+
+}
+.b-t-n{
+    padding: 7px 20px ;
+    background-color: #232a36;
+    color: white;
+
+}
+.b-t-n:hover{
+    background-color: white;
+    color: #232a36;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+.desc-mark{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

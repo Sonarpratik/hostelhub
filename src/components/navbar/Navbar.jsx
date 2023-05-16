@@ -1,9 +1,30 @@
-import React, { } from "react";
+import React, {useEffect,useState } from "react";
 import { Link } from "react-router-dom";
 import "./navbar.css";
+import axios from "axios";
 // import himg from "./../../pages/img/hostelhubblack.png"
 
 const Navbar = () => {
+  const [data, setData] = useState();
+
+  useEffect(() => {
+    // callAboutPage();
+
+    
+
+  axios({
+    method: "GET",
+    withCredentials: true,
+    url: "http://localhost:4000/user",
+  }).then((res) => {
+    setData(res.data);
+    console.log(res.data);
+  }).catch((err)=>{
+// navigate("/login")
+    console.log(err);
+  })
+
+    }, []);
 
   return (
     <div  className="nav-bg">
@@ -15,7 +36,7 @@ const Navbar = () => {
             {/* <img width="100%" height="40px" src={himg} alt="" /> */}
             <h3 className="bold-400">
 
-            HOSTEL <span className="theme-color ">HUB</span>
+            CANTEEN <span className="theme-color ">HUB</span>
             </h3>
           </Link>
           <button
@@ -48,24 +69,24 @@ home
                 
               </li>
               <li className="nav-item">
-                <Link className="nav-link color-w" to="/goto">
+                <Link className="nav-link color-w" to="/about">
                   <div className="material-symbols-outlined pr-10">
 group
                   </div>
                   ABOUT US
                 </Link>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link className="nav-link color-w" to="/thehub">
                 <div className="material-symbols-outlined pr-10">
 rocket_launch
                   </div>
                   THE HUB
                 </Link>
-              </li>
+              </li> */}
                   </div>
                   <div className="color-w makeit-flex-nav">
-                    {localStorage.getItem("inputvalue")==="donea"?<li className="nav-item">
+                    {data?<li className="nav-item">
                   <Link className="nav-link color-w" to="/logout">
                 <div className="material-symbols-outlined pr-10">
                 LOGOUT

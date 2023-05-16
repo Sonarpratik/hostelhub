@@ -9,6 +9,8 @@ import { useState } from "react";
 import Navbar from "../../components/navbar/Navbar";
 import BeatLoader from "react-spinners/BeatLoader";
 import hostel from "./../img/hostelhub1.png"
+import axios from "axios";
+// import axios from "axios";
 
 
 const Register = () => {
@@ -18,10 +20,10 @@ const navigate = useNavigate();
 
   const [user, setUser] = useState({
     name: "",
-    email: "",
+    username: "",
     phone: "",
     password: "",
-    cpassword: "",
+    // cpassword: "",
   });
 
   const handleInputs = (e) => {
@@ -31,57 +33,31 @@ const navigate = useNavigate();
     setUser({ ...user, [name]: values });
   };
 const [load, setLoad] = useState("Register");
-  const Postdata = async (e) => {
-    // data.status?localStorage.setItem("load","finish");:localStorage.setItem("load","finish");
-    //To prevent reload function
-    setLoad("Wait");
-    e.preventDefault();
-    //instead of user.name just write name
-    const {name,email,phone,password,cpassword}=user;
-// "proxy":"http://localhost:4000",
-
-   const response = await fetch("/register",{
-    // mode: 'no-cors',
-    method:"POST",
-    headers:{
-      "Content-Type":"application/json"
-    },
-    body:JSON.stringify({
-      // to send data to Data base it has to be in string formate
-    //   "name": "pratik",
-    // "email": "pratik07@gmail.com",
-    // "phone": 8698440584,
-    // "password": "done1",
-    // "cpassword": "done1" 
-    //name:name=>name
-    name,email,phone,password,cpassword
+const Postdata = async () => {
+  setLoad("Wait")
+  
+  try {
+  
+    const res =await axios({
+      method: "POST",
+      data: {
+     user
+      },
+      withCredentials: true,
+      url: "http://localhost:4000/register",
     })
-   });
+  
+    console.log(res)
+    // localStorage.setItem("inputkey","donea");
+    navigate("/login")
+  } catch (error) {
+    window.alert("Wrong Crendintials")
+    console.log(error)
+  setLoad("Login")
+  
+  }
+  
    
-   const data = await response;
-    console.log(data.status);
-   if(data.status === 422){
-    window.alert("Invalid Registration");
-    console.log("Invalid Registration");
-    setLoad("Register")
-   }
-   else if(data.status===402){
-    window.alert("Please Fill The Data");
-    setLoad("Register")
-
-  }else if(data.status===200){
-    window.alert("Registration Successfull");
-    console.log("Registration Successfull");
-    setLoad("Register")
-
-
-// return <edirect to="/login"/>
-navigate("/login")
-
-   }else{
-navigate("/contact")
-
-   }
   };
 
   return (
@@ -114,10 +90,10 @@ navigate("/contact")
             </label>{" "}
             <input
             
-              type="email"
-              name="email"
+              type="text"
+              name="username"
               onChange={handleInputs}
-              value={user.email}
+              value={user.username}
               autoComplete="off"
               className="done"
               placeholder="Enter Your Gmail"

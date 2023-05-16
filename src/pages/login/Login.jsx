@@ -3,63 +3,89 @@ import "./login.css";
 // import logo from "../images/in.png";
 import login from "../img/login.png";
 import lock from "../img/lock.png";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import {  useNavigate } from "react-router-dom";
 import Navbar from "../../components/navbar/Navbar";
 import BeatLoader from "react-spinners/BeatLoader";
+import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
+
 import hostel from "./../img/hostelhub1.png"
+import axios from "axios";
 
 
 
 
 
-const Login = () => {
+function Login() {
     const navigate = useNavigate();
-  const [email, setEmail] = useState("");
+  const [username, setEmail] = useState("");
   const [password, setpassword] = useState("");
+  const [data, setdata] = useState("");
   const [load, setLoad] = useState("Login");
 const loading=true;
-  const loginUser = async (e) => {
-    setLoad("Wait")
-    e.preventDefault();
 
-    const response = await fetch("/login", {
-      
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        email,
-        password,
-      }),
-    });
-    const data =await response;
-        if(data.status===404){
-            window.alert("Invalid Credentials")
-    setLoad("Login")
 
-        }else if(data.status===201){
-          localStorage.setItem("inputvalue","donea");
-                window.alert("Login SuccessFull");
-    setLoad("Login")
 
-navigate("/")
+const loginf = async () => {
+setLoad("Wait")
 
-        }else{
-            window.alert("lock Down Procedure Exit The page Fast")
-    setLoad("Login")
+try {
 
-        }
+  const res =await axios({
+    method: "POST",
+    data: {
+      username: username,
+      password: password,
+    },
+    withCredentials: true,
+    url: "http://localhost:4000/login",
+  })
+
+  console.log(res)
+  localStorage.setItem("inputvalue","donea");
+  navigate("/")
+} catch (error) {
+  window.alert("Wrong Crendintials")
+  console.log(error)
+setLoad("Login")
+
+}
+
+ 
 };
+
+
+useEffect(() => {
+ 
+
+  axios({
+    method: "GET",
+    withCredentials: true,
+    url: "http://localhost:4000/login",
+  }).then((res) => {
+    // setData(res.data);
+    setdata(res.status)
+    console.log(res.status);
+ 
+  }).catch((err)=>{
+    console.log(err);
+navigate("/")
+  })
+}, []);
+
+
+
   return (
-    <>
+    <div>
     <Navbar/>
-    <div className="login">
-      <div className="login-box">
+
+      {data===200?
+    <form className="login">
+
+<div className="login-box">
       <img src={hostel} className="login-img" alt="" />
 
-        <form className="login-box-left" method="POST">
+        <div className="login-box-left" >
           <h3>Sign In</h3>
           <div className="in-line">
             {" "}
@@ -68,7 +94,7 @@ navigate("/")
             </label>{" "}
             <input
               autoComplete="off"
-              value={email}
+              value={username}
               onChange={(e) => setEmail(e.target.value)}
               className="done"
               type="email"
@@ -83,7 +109,7 @@ navigate("/")
             </label>
             <input
               required={true}
-
+              
               autoComplete="off"
               value={password}
               onChange={(e) => setpassword(e.target.value)}
@@ -107,17 +133,24 @@ navigate("/")
             name="signin"
             id="signin"
             className="btn-login"
-            onClick={loginUser}
+            onClick={loginf}
             value={load}
             />
           }
          
-        </form>
+        </div>
         <div className="login-box-right"></div>
       </div>
+    </form>
+      :<p className="loading"> <ClimbingBoxLoader
+      color={"goldenrod"}
+      loading={loading}
+      size={30}
+      
+      /></p>}
     </div>
-            </>
-  );
-};
-
-export default Login;
+    );
+    
+  }
+  export default Login;
+  

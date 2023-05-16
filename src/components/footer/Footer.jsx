@@ -13,7 +13,7 @@ const Footer = () => {
             {/* <img width="100%" height="40px" src={himg} alt="" /> */}
             <h3 className="bold-400">
 
-            HOSTEL <span className="theme-color ">HUB</span>
+            CANTEEN <span className="theme-color ">HUB</span>
             </h3>
           </Link> <br />
 <h3>

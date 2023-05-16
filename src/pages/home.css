@@ -63,3 +63,7 @@ ul li a{
     flex-direction: column;
     justify-content: center;
 }
+
+.here-this{
+    -webkit-user-select: none;
+}

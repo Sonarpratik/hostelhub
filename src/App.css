@@ -11,6 +11,7 @@ html{
     font-family: 'Sono', sans-serif;
   font-family: 'Righteous', cursive;
 
+  -webkit-user-select: none;
     
 }
 /* #here{

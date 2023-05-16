@@ -32,7 +32,7 @@ const Logout = () => {
   
   return <div>
     <Navbar/>
-<div className="main logouts">
+<div style={{height:"70vh"}} className="main logouts">
 
     
     <ClimbingBoxLoader

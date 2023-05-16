@@ -10,7 +10,7 @@ const About = () => {
         <div className="inner-product">
          
           <div className="desc-mark">
-            <h1>Pratik Sonar</h1>
+            <h1>Pratik <span style={{color:"goldenrod"}}>Sonar</span>  </h1>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio
               ducimus sit perspiciatis magnam sequi nisi architecto dolores
@@ -34,7 +34,7 @@ const About = () => {
             style={{width:"500px",borderBottomRightRadius:"360px"}}
           />
           <div className="desc-mark">
-            <h1>Tanuja Gadhe</h1>
+            <h1><span style={{color:"goldenrod"}}>Tanuja</span>  Gadhe</h1>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio
               ducimus sit perspiciatis magnam sequi nisi architecto dolores
@@ -49,7 +49,7 @@ const About = () => {
         <div className="inner-product">
          
           <div className="desc-mark">
-            <h1>Ram Thakur</h1>
+            <h1>Ram <span style={{color:"goldenrod"}}>Thakur</span> </h1>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio
               ducimus sit perspiciatis magnam sequi nisi architecto dolores
@@ -73,7 +73,7 @@ const About = () => {
             style={{width:"500px",borderBottomRightRadius:"360px"}}
           />
           <div className="desc-mark">
-            <h1>Dipali Raskar</h1>
+            <h1><span style={{color:"goldenrod"}}>Dipali</span>  Raskar</h1>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio
               ducimus sit perspiciatis magnam sequi nisi architecto dolores
@@ -88,7 +88,7 @@ const About = () => {
         <div className="inner-product">
          
           <div className="desc-mark">
-            <h1>Shreyash Munde</h1>
+            <h1>Shreyash <span style={{color:"goldenrod"}}>Munde</span> </h1>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio
               ducimus sit perspiciatis magnam sequi nisi architecto dolores
